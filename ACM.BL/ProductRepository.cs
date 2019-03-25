@@ -32,7 +32,9 @@ namespace ACM.BL
                 product.Description = "Bacon ipsum dolor amet beef ribs pork loin cow drumstick cupim frankfurter landjaeger pork chop meatball bresaola fatback chuck. Ham tail turkey jerky biltong rump frankfurter shoulder. Beef ribs venison corned beef chuck. Burgdoggen tongue pork loin meatball turducken landjaeger.";
                 product.CurrentPrice = 19.99M;
             }
-
+            Object myObject = new object();
+            Console.WriteLine($"Object: {myObject.ToString()}");
+            Console.WriteLine($"Product: {product.ToString()}");
             return product;
         }
 
@@ -40,9 +42,29 @@ namespace ACM.BL
         /// Saves the current product
         /// </summary>
         /// <returns></returns>
-        public bool Save()
+        public bool Save(Product product)
         {
-            return true;
+            var success = true;
+
+            if (product.HasChanges)
+            {
+                if (product.IsValid)
+                {
+                    if (product.IsNew)
+                    {
+                        // call insert
+                    }
+                    else
+                    {
+                        // call update
+                    }
+                }
+                else
+                {
+                    success = false;
+                }
+            }
+            return success;
         }
     }
 }
