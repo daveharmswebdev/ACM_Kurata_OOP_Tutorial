@@ -15,7 +15,7 @@ namespace ACM.BLTest
             {
                 ProductName = "Widget",
                 Description = "this is a great widget",
-                CurrentPrice = 1.00
+                CurrentPrice = 1.00M
             };
             var expected = true;
 
@@ -33,7 +33,7 @@ namespace ACM.BLTest
             var product = new Product
             {
                 Description = "this is a great widget",
-                CurrentPrice = 1.00
+                CurrentPrice = 1.00M
             };
             var expected = false;
 
@@ -51,7 +51,7 @@ namespace ACM.BLTest
             var product = new Product
             {
                 ProductName = "Widget",
-                CurrentPrice = 1.00
+                CurrentPrice = 1.00M
             };
             var expected = false;
 

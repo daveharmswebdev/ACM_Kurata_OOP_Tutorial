@@ -21,7 +21,7 @@ namespace ACM.BL
         public int OrderItemId { get; private set; }
         public Product Product { get; set; }
         public int Quantity { get; set; }
-        public double? PurchasePrice { get; set; }
+        public decimal? PurchasePrice { get; set; }
 
         public bool Validate()
         {
